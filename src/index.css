@@ -1,0 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .backface-hidden {
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+  }
+  .backface-visible {
+    backface-visibility: visible;
+    -moz-backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+    -ms-backface-visibility: visible;
+  }
+}
+
+* {
+  @apply selection:bg-teal-500 selection:text-gray-900;
+}
+
+p,
+span,
+h1,
+h2,
+h3,
+h4 {
+  @apply cursor-default;
+}
+
+body {
+  @apply bg-gray-900 text-gray-100;
+  overflow-y: overlay;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #374151;
+}
+
+.content {
+  @apply flex flex-col items-center justify-center px-40 xl:px-20 xs:px-12;
+}
+
+.btn {
+  @apply relative flex cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl border border-gray-900 bg-gradient-to-tr from-gray-700 to-gray-600 py-2 px-4 font-bold text-gray-100 after:absolute after:inset-0 after:bg-gradient-to-bl after:from-gray-700 after:to-gray-600 after:opacity-0 after:transition-opacity after:duration-200 hover:border-gray-700 hover:after:opacity-100 smb:text-sm xs:py-1 xs:px-2 xs:text-xs;
+}
+
+.logInBtnGr {
+  @apply relative overflow-hidden bg-gradient-to-tr from-teal-500  via-blue-500 to-purple-500  text-gray-900 transition-all duration-200 after:absolute after:inset-0 after:bg-gradient-to-bl after:from-teal-500 after:via-blue-500 after:to-purple-500 after:opacity-0 after:transition-opacity after:duration-200 hover:after:opacity-100;
+}
+
+.logOutBtnGr {
+  @apply relative overflow-hidden bg-gradient-to-tr from-red-700  to-red-500  text-gray-900 transition-all duration-200 after:absolute after:inset-0 after:bg-gradient-to-bl after:from-red-700 after:to-red-500 after:opacity-0 after:transition-opacity after:duration-200 hover:after:opacity-100;
+}
+
+.fastTxt {
+  @apply after:backface-hidden relative overflow-hidden bg-gradient-to-r from-gray-100 to-gray-100 bg-clip-text font-extrabold text-transparent transition-all duration-500 after:absolute after:inset-0 after:translate-y-[12.5%] after:bg-gradient-to-r after:from-teal-500 after:to-blue-500 after:bg-clip-text after:opacity-0 after:transition-opacity after:duration-500 after:content-["Fast."] xs:after:translate-y-[.1rem];
+}
+
+.easyTxt {
+  @apply after:backface-hidden relative overflow-hidden bg-gradient-to-r from-gray-100 to-gray-100 bg-clip-text font-extrabold text-transparent transition-all duration-500 after:absolute after:inset-0 after:translate-y-[12.5%] after:bg-gradient-to-r after:from-blue-500 after:to-purple-500 after:bg-clip-text after:opacity-0 after:transition-opacity after:duration-500 after:content-["Easy."] xs:after:translate-y-[.1rem];
+}
+
+.freeTxt {
+  @apply after:backface-hidden relative overflow-hidden bg-gradient-to-r from-gray-100 to-gray-100 bg-clip-text font-extrabold text-transparent transition-all duration-500 after:absolute after:inset-0 after:translate-y-[12.5%] after:bg-gradient-to-r after:from-purple-500 after:to-red-500 after:bg-clip-text after:opacity-0 after:transition-opacity after:duration-500 after:content-["Free."] xs:after:translate-y-[.1rem];
+}
+
+.heroPrimaryLink0 {
+  @apply relative flex cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl border-2 border-gray-900 bg-gradient-to-tr from-teal-500 to-blue-500 py-2 px-4 font-semibold text-gray-100 transition-all duration-200 before:absolute before:inset-0 before:z-10 before:bg-gradient-to-tr before:from-blue-500 before:to-purple-500 before:opacity-0 before:transition-opacity before:duration-500 after:absolute after:inset-0 after:z-20 after:bg-gradient-to-tr after:from-purple-500 after:to-red-500 after:opacity-0 after:transition-opacity after:duration-500 smb2:text-sm;
+}
+
+.inputLabel {
+  @apply w-full text-sm font-semibold text-gray-300;
+}
+
+.inputTitle {
+  @apply mt-1 w-full cursor-auto rounded-lg border border-gray-800 bg-gray-700 py-2 px-4 text-base font-normal text-gray-100 outline-none ring-offset-0 focus:border focus:border-teal-500 focus:ring-0;
+}
+
+.inputDescription {
+  @apply mt-1 w-full cursor-auto rounded-lg border border-gray-800 bg-gray-700 py-2 px-4 text-base font-normal text-gray-100 outline-none ring-offset-0 focus:border focus:border-teal-500 focus:ring-0;
+}
+
+.optionsRequired {
+  @apply relative text-red-300 after:absolute after:top-0 after:right-0 after:w-max after:translate-x-[102%] after:translate-y-[10%] after:text-xs after:font-normal after:opacity-0 after:transition-opacity after:duration-200 after:content-['At_least_2_characters'] hover:after:opacity-100;
+}
+
+.deleteBtn {
+  @apply absolute top-0 right-0 mt-[-1px] h-full rounded-lg border border-transparent px-4 text-xs font-bold text-gray-500 outline-none ring-offset-0 transition-all duration-200 hover:text-red-500 focus:border focus:border-teal-500 focus:ring-0;
+}
+
+.inputOptionDef {
+  @apply w-full cursor-auto rounded-lg border border-gray-800 py-2 px-4 outline-none ring-offset-0 focus:border focus:border-teal-500 focus:ring-0;
+}
+
+.inputOptionNorm {
+  @apply bg-gray-700;
+}
+
+.inputOptionOther {
+  @apply select-none bg-gray-600 font-semibold text-gray-300 ring-offset-0 focus:ring-0;
+}
+
+.descriptionBtn {
+  @apply -mt-2 rounded-lg border border-gray-800 py-1 px-2 text-sm text-gray-400 outline-none transition-all duration-200 hover:text-gray-100 hover:underline focus:border-teal-700;
+}
+
+.addOptionBtn {
+  @apply relative flex cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-gray-800 bg-gradient-to-tr from-gray-800 to-gray-700 py-2 px-4 outline-none after:absolute after:inset-0 after:bg-gradient-to-bl after:from-gray-800 after:to-gray-700 after:opacity-0 after:transition-opacity after:duration-200 hover:border-gray-700 hover:after:opacity-100 focus:border-teal-500 xs:text-sm;
+}
+
+.addOtherBtn {
+  @apply rounded-lg border border-gray-800 py-1 px-2 text-gray-400 outline-none transition-all duration-200 hover:text-gray-100 hover:underline focus:border-teal-500 xs:text-sm;
+}
+
+.chevronIcon {
+  @apply h-6 w-6 cursor-pointer rounded-full p-[2px] text-teal-500 transition-transform duration-500 hover:bg-gray-700;
+}
+
+.dateBtn {
+  @apply rounded-full border border-gray-800 bg-gradient-to-r from-gray-700 to-gray-700 py-1 px-2 text-sm outline-none transition-all duration-200 hover:border-gray-500 focus:border-teal-500;
+}
+
+.datetime {
+  @apply cursor-pointer select-none rounded-full border border-gray-800 bg-gray-700 py-1 px-2 text-xs text-gray-100 outline-none focus:border-teal-500;
+}
+
+.datetimeActive,
+.dateBtnActive {
+  @apply cursor-default bg-gradient-to-r from-gray-500 to-gray-500 hover:border-gray-800 focus:border-gray-400;
+}
+
+.selectionBtn {
+  @apply rounded-full border border-gray-800 bg-gradient-to-r from-gray-700 to-gray-700 py-1 px-3 text-sm outline-none transition-all duration-200 hover:border-gray-500 focus:border-teal-500;
+}
+
+.selectionBtnActive {
+  @apply cursor-default bg-gradient-to-r from-gray-500 to-gray-500 hover:border-gray-800 focus:border-gray-400;
+}
+
+.inputFrom,
+.inputTo {
+  @apply w-20 cursor-auto rounded-full border border-gray-800
+  bg-gray-700 py-1 px-3 text-xs outline-none focus:border-teal-500;
+}
+
+.slugWarning {
+  @apply relative ml-[2px] text-gray-300 after:absolute after:top-0 after:right-0 after:w-max after:translate-x-[104%] after:translate-y-[10%] after:text-xs after:font-normal after:text-gray-300 after:opacity-0 after:transition-opacity after:duration-200 after:content-[attr(data-content)] hover:after:opacity-100;
+}
+
+.inputSlug {
+  @apply w-full cursor-auto rounded-lg border border-gray-800 bg-gray-700 py-2 pl-[8.5rem] pr-4 text-base font-normal text-gray-100 outline-none ring-offset-0 focus:border focus:border-teal-500 focus:ring-0 smb:pl-[6.7rem] smb:text-sm smb:placeholder:text-xs slg:pl-2;
+}
+
+.slugMeBtn {
+  @apply absolute right-0 top-px -translate-y-px overflow-hidden rounded-lg border border-gray-700 bg-gradient-to-tr from-teal-500 via-blue-500 to-purple-500 py-2 px-4 text-base text-gray-100 outline-none ring-offset-0 before:absolute before:inset-0 before:bg-gradient-to-bl before:from-teal-500 before:via-blue-500 before:to-purple-500 before:opacity-0 before:transition-opacity before:duration-200 hover:before:opacity-100 focus:border focus:border-teal-500 focus:ring-0 smb:translate-y-[1px] smb:text-xs;
+}
+
+.formSubmitBtn {
+  @apply relative overflow-hidden rounded-lg border border-gray-800 bg-gradient-to-tr from-teal-700 to-teal-500 py-1 px-3 text-lg font-semibold outline-none before:absolute before:inset-0 before:bg-gradient-to-bl before:from-teal-700 before:to-teal-500 before:opacity-0 before:transition-opacity before:duration-200 hover:border-gray-600 hover:before:opacity-100 focus:border-teal-300 disabled:bg-gradient-to-tr disabled:from-teal-900 disabled:to-teal-700 disabled:font-normal disabled:italic disabled:text-teal-500 disabled:hover:border-gray-800 disabled:hover:before:opacity-0;
+}
+
+.voteBtn {
+  @apply relative overflow-hidden rounded-lg border border-gray-800 bg-gradient-to-tr from-blue-700 to-blue-500 py-1 px-3 text-lg font-semibold outline-none before:absolute before:inset-0 before:bg-gradient-to-bl before:from-blue-700 before:to-blue-500 before:opacity-0 before:transition-opacity before:duration-200 hover:border-gray-600 hover:before:opacity-100 focus:border-blue-300 disabled:bg-gradient-to-tr disabled:from-blue-900 disabled:to-blue-700 disabled:font-normal disabled:italic disabled:text-blue-500 disabled:hover:border-gray-800 disabled:hover:before:opacity-0 smb2:px-2 smb2:text-sm;
+}
+
+.resultsBtn {
+  @apply relative overflow-hidden rounded-lg border border-gray-800 bg-gradient-to-tr from-gray-700 to-gray-500 py-1 px-3 text-lg font-normal outline-none before:absolute before:inset-0 before:cursor-pointer before:bg-gradient-to-bl before:from-gray-700 before:to-gray-500 before:opacity-0 before:transition-opacity before:duration-200 hover:border-gray-400 hover:before:opacity-100 focus:border-blue-400 smb2:px-2 smb2:text-sm;
+}
+
+.accountBtnCreated {
+  @apply relative flex cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl border border-purple-900 bg-gradient-to-tr from-purple-900 to-purple-800 py-2 px-3 font-normal italic text-purple-500 after:absolute after:inset-0 after:bg-gradient-to-bl after:from-purple-900 after:to-purple-800 after:opacity-0 after:transition-opacity after:duration-200 hover:border-purple-800 hover:after:opacity-100 smb2:text-sm;
+}
+
+.accountBtnVoted {
+  @apply relative flex cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl border border-blue-900 bg-gradient-to-tr from-blue-900 to-blue-800 py-2 px-3 font-normal italic text-blue-500 after:absolute after:inset-0 after:bg-gradient-to-bl after:from-blue-900 after:to-blue-600 after:opacity-0 after:transition-opacity after:duration-200 hover:border-blue-800 hover:after:opacity-100 smb2:text-sm;
+}
+
+.accountBtnCreatedActive {
+  @apply relative flex cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl border border-purple-900 bg-gradient-to-tr from-purple-600 to-purple-500 py-2 px-3 font-semibold text-purple-100 after:absolute after:inset-0 after:bg-gradient-to-bl after:from-purple-600 after:to-purple-500 after:opacity-0 after:transition-opacity after:duration-200 hover:border-purple-700 hover:after:opacity-100 smb2:text-sm;
+}
+
+.accountBtnVotedActive {
+  @apply relative flex cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl border border-blue-900 bg-gradient-to-tr from-blue-600 to-blue-500 py-2 px-3 font-semibold text-blue-100 after:absolute after:inset-0 after:bg-gradient-to-bl after:from-blue-600 after:to-blue-500 after:opacity-0 after:transition-opacity after:duration-200 hover:border-blue-700 hover:after:opacity-100;
+}
+
+.inputAdminPass {
+  @apply mt-1 w-full cursor-auto rounded-lg border border-gray-800 bg-gray-700 py-2 px-4 text-base font-normal text-gray-100 outline-none ring-offset-0 focus:border focus:border-purple-500 focus:ring-0;
+}
+
+.adminPassSubmitBtn {
+  @apply relative overflow-hidden rounded-lg border border-gray-800 bg-gradient-to-tr from-purple-700 to-purple-500 py-1 px-3 text-lg font-semibold outline-none before:absolute before:inset-0 before:bg-gradient-to-bl before:from-purple-700 before:to-purple-500 before:opacity-0 before:transition-opacity before:duration-200 hover:border-gray-600 hover:before:opacity-100 focus:border-purple-300 disabled:bg-gradient-to-tr disabled:from-purple-900 disabled:to-purple-700 disabled:font-normal disabled:italic disabled:text-purple-500 disabled:hover:border-gray-800 disabled:hover:before:opacity-0 slg:text-sm xs:text-xs;
+}
+
+.adminPassShowBtn {
+  @apply relative overflow-hidden rounded-lg border border-gray-800 bg-gradient-to-tr from-gray-700 to-gray-500 py-1 px-3 text-lg font-semibold outline-none before:absolute before:inset-0 before:bg-gradient-to-bl before:from-gray-700 before:to-gray-500 before:opacity-0 before:transition-opacity before:duration-200 hover:border-gray-600 hover:before:opacity-100 focus:border-gray-300 disabled:bg-gradient-to-tr disabled:from-gray-900 disabled:to-gray-700 disabled:font-normal disabled:italic disabled:text-gray-500 disabled:hover:border-gray-800 disabled:hover:before:opacity-0 slg:text-sm xs:text-xs;
+}
+
+.voteLinkAdmin {
+  @apply relative overflow-hidden rounded-lg border border-gray-800 bg-gradient-to-tr from-blue-700 to-blue-500 py-1 px-3 text-lg font-semibold outline-none before:absolute before:inset-0 before:cursor-pointer before:bg-gradient-to-bl before:from-blue-700 before:to-blue-500 before:opacity-0 before:transition-opacity before:duration-200 hover:border-gray-600 hover:before:opacity-100 focus:border-blue-300 disabled:bg-gradient-to-tr disabled:from-blue-900 disabled:to-blue-700 disabled:font-normal disabled:italic disabled:text-blue-500 disabled:hover:border-gray-800 disabled:hover:before:opacity-0 smb:px-3 smb:text-sm xs:px-1 xs:text-xs;
+}
+
+.resultsLinkAdmin {
+  @apply relative overflow-hidden rounded-lg border border-gray-800 bg-gradient-to-tr from-purple-700 to-purple-500 py-1 px-3 text-lg font-semibold outline-none before:absolute before:inset-0 before:cursor-pointer before:bg-gradient-to-bl before:from-purple-700 before:to-purple-500 before:opacity-0 before:transition-opacity before:duration-200 hover:border-gray-600 hover:before:opacity-100 focus:border-purple-300 disabled:bg-gradient-to-tr disabled:from-purple-900 disabled:to-purple-700 disabled:font-normal disabled:italic disabled:text-purple-500 disabled:hover:border-gray-800 disabled:hover:before:opacity-0 smb:px-3 smb:text-sm xs:px-1 xs:text-xs;
+}
+
+.editBtnAdmin {
+  @apply relative overflow-hidden rounded-2xl border border-gray-800 bg-opacity-50 bg-gradient-to-tr from-yellow-700 to-yellow-500 py-1 px-3 text-lg font-semibold outline-none before:absolute before:inset-0 before:cursor-pointer before:bg-opacity-50 before:bg-gradient-to-bl before:from-yellow-700 before:to-yellow-500 before:opacity-0 before:transition-opacity before:duration-200 hover:border-gray-600 hover:before:opacity-100 focus:border-yellow-300 disabled:bg-gradient-to-tr disabled:from-yellow-900 disabled:to-yellow-700 disabled:font-normal disabled:italic disabled:text-yellow-500 disabled:hover:border-gray-800 disabled:hover:before:opacity-0 smb:px-3 smb:text-sm xs:px-1 xs:text-xs;
+}
+
+.deleteBtnAdmin {
+  @apply relative overflow-hidden rounded-lg border border-gray-800 bg-gradient-to-tr from-red-700 to-red-500 py-1 px-3 text-lg font-semibold outline-none before:absolute before:inset-0 before:cursor-pointer before:bg-gradient-to-bl before:from-red-700 before:to-red-500 before:opacity-0 before:transition-opacity before:duration-200 hover:border-gray-600 hover:before:opacity-100 focus:border-red-300 disabled:bg-gradient-to-tr disabled:from-red-900 disabled:to-red-700 disabled:font-normal disabled:italic disabled:text-red-500 disabled:hover:border-gray-800 disabled:hover:before:opacity-0 smb:px-3 smb:text-sm xs:px-1 xs:text-xs;
+}
