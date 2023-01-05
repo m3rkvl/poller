@@ -5,14 +5,13 @@ import { getFirestore } from "firebase/firestore";
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA4hIQD6T0y3kY6tYsaV4izAIDdCyCVXhw",
-  authDomain: "poller-m3rkvl.firebaseapp.com",
-  databaseURL:
-    "https://poller-m3rkvl-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "poller-m3rkvl",
-  storageBucket: "poller-m3rkvl.appspot.com",
-  messagingSenderId: "759223342520",
-  appId: "1:759223342520:web:ff755497aa62864998eb4d",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASE_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_ID,
 };
 
 // Initialize Firebase
