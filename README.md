@@ -3,13 +3,13 @@ An app for creating, voting on, seeing the results of, and managing polls...
 
 ## Project Screenshots 
 
-### Poll creation page
+#### Poll creation page
 ![1](https://user-images.githubusercontent.com/111198925/210998360-17b5c860-0e6d-418c-bf35-a59ba0e2aaf6.png)
-### Admin page
+#### Admin page
 ![2](https://user-images.githubusercontent.com/111198925/210998365-b8780b14-48a7-4dcc-a458-122fca999150.png)
-### Voting page
+#### Voting page
 ![3](https://user-images.githubusercontent.com/111198925/210998366-b99312ae-0f75-428b-a0ca-646c1e4b3d05.png)
-### Results page
+#### Results page
 ![4](https://user-images.githubusercontent.com/111198925/210998367-b687f068-927c-47de-a8cd-8f885122ce5e.png)
 
 ## Reflection
